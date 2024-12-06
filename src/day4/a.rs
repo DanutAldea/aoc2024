@@ -16,7 +16,7 @@ fn within_boundaries(text: &[Vec<char>], x: isize, y: isize) -> bool {
     x >= 0 && y >= 0 && (x as usize) < text.len() && (y as usize) < text[0].len()
 }
 
-fn search(text: &Vec<Vec<char>>, x: usize, y: usize) -> usize {
+fn search(text: &[Vec<char>], x: usize, y: usize) -> usize {
     DIRECTIONS
         .iter()
         .map(|(dx, dy)| {
